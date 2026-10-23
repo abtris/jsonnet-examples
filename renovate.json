@@ -2,5 +2,18 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "local>abtris/renovate-config"
+  ],
+  "packageRules": [
+    {
+      "description": "Automerge all updates once checks pass",
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
+      "automerge": true
+    }
   ]
 }
